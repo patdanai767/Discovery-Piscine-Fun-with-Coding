@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+      }
+
+      .container {
+        display: grid;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 10px;
+      }
+      .add-list {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+      .btn-add {
+        padding: 5px 30px;
+        border: none;
+        background-color: rgb(143, 195, 118);
+        cursor: pointer;
+      }
+
+      .btn-add:hover {
+        background-color: rgb(187, 234, 198);
+        transition: ease-in-out 0.2s;
+      }
+
+      .ft_list {
+        display: grid;
+        gap: 16px;
+        justify-content: center;
+      }
+
+      .ft_list li {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 8px;
+        margin-right: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TO DO LIST</h1>
+      <div class="add-list">
+        <h5>Add list</h5>
+        <button class="btn-add">New</button>
+      </div>
+      <div class="ft_list" id="ft_list">
+        <!-- <p>p</p> -->
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>

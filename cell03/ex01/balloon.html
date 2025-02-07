@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div
+        class="balloon"
+        id="balloon"
+        onclick="expandBalloon()"
+        onmouseleave="expandBalloonHover()"
+      ></div>
+    </div>
+    <script>
+      // when click colors change red to green to blue to red again!
+      // when click balloons will expand 10px
+      // when leave circle will expand -5px
+      // show text
+      var nums = 0;
+      const colors = ["red", "green", "blue"];
+      const element = document.getElementById("balloon");
+      var sizeBalloon = 200;
+
+      function expandBalloon() {
+        if (sizeBalloon >= 200) {
+          sizeBalloon = sizeBalloon + 10;
+          if (sizeBalloon > 420) sizeBalloon = 200;
+          nums++;
+          if (nums == 3) nums = 0;
+          element.style.width = `${sizeBalloon}px`;
+          element.style.height = `${sizeBalloon}px`;
+          element.style.backgroundColor = colors[nums];
+        }
+      }
+      function expandBalloonHover() {
+        if (sizeBalloon > 200) {
+          sizeBalloon = sizeBalloon - 5;
+          if (nums == 0) nums = 3;
+          --nums;
+          element.style.width = `${sizeBalloon}px`;
+          element.style.height = `${sizeBalloon}px`;
+          element.style.backgroundColor = colors[nums];
+        }
+      }
+    </script>
+  </body>
+</html>

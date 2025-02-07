@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="backgroound.css" />
+  </head>
+  <body id="changeColor">
+    <div>
+      <button onclick="changeColor()">Click me!</button>
+    </div>
+
+    <script>
+      function changeColor() {
+        const colors = [
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "gray",
+          "yellow",
+          "purple",
+          "green",
+          "white",
+          "orange",
+        ];
+
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.getElementById("changeColor").style.backgroundColor =
+          randomColor;
+      }
+    </script>
+  </body>
+</html>

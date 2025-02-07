@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+.parallax-1{
+    background-image: url("https://www.wearegecko.co.uk/media/50316/mountain-3.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.parallax-2{
+    background-image: url("https://cdn.pixabay.com/photo/2022/01/28/18/32/leaves-6975462_1280.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 25%;
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000000;
+}
+
+.text{
+    text-align: center;
+    color: white;
+}

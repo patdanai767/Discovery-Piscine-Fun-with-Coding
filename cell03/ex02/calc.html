@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="text" id="value1" name="value2" />
+    <select name="operation" id="operation">
+      <option value=""></option>
+      <option value="plus">+</option>
+      <option value="minus">-</option>
+      <option value="time">*</option>
+      <option value="divide">/</option>
+      <option value="mod">%</option>
+    </select>
+    <input type="text" id="value2" name="value3" />
+    <button onclick="calculator()">Try me!</button>
+
+    <script>
+      function isNumeric(value) {
+        return /^-?\d+$/.test(value);
+      }
+      function calculator() {
+        var x = parseFloat(document.getElementById("value1").value);
+        var y = parseFloat(document.getElementById("value2").value);
+        var op = document.getElementById("operation").value;
+        if (
+          x < 0 ||
+          y < 0 ||
+          x != NaN ||
+          y != NaN ||
+          isNumeric(document.getElementById("value1").value) ||
+          isNumeric(document.getElementById("value2").value)
+        ) {
+          alert("Error :(");
+        } else if (op == "plus") {
+          z = x + y;
+          console.log("Answer = " + z);
+          alert("Answer = " + z);
+        } else if (op == "minus") {
+          z = x - y;
+          console.log("Answer = " + z);
+          alert("Answer = " + z);
+        } else if (op == "time") {
+          z = x * y;
+          console.log("Ans  wer = " + z);
+          alert("Answer = " + z);
+        } else if (op == "divide") {
+          if (y == 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+          } else {
+            z = x / y;
+            console.log("Answer = " + z);
+            alert("Answer = " + z);
+          }
+        } else if (op == "mod") {
+          if (y == 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+          } else {
+            z = x % y;
+            console.log("Answer = " + z);
+            alert("Answer = " + z);
+          }
+        }
+      }
+
+      setInterval(() => {
+        alert("Please, use me...");
+      }, 30000);
+    </script>
+  </body>
+</html>
